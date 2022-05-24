@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <h4 class="mb-3 text-center d-block d-sm-none">Home</h4>
+  <PostContent url="https://gorest.co.in/public/v2/posts" :user_id="user_id" />
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import PostContent from "../components/PostContent.vue";
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+    name: "HomeView",
+    components: { PostContent },
+    props: {
+      user_id: Number
+    }
 }
+
 </script>
+
+<style lang="scss" scoped>
+
+</style>
